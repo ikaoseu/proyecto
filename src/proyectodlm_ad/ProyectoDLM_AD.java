@@ -15,8 +15,8 @@ public class ProyectoDLM_AD {
     /**
      * @param args the command line arguments
      */
-    public void main(String[] args)throws IOException {
-        ProyectoDLM_AD objeto = new ProyectoDLM_AD();
+    public static void main(String[] args)throws IOException {
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("indique si quiere logearse(1), dar de alta(2) o dar de baja(3): \n");
         int menu = sc.nextInt();
@@ -37,19 +37,50 @@ public class ProyectoDLM_AD {
                  java.io.RandomAccessFile aa = new java.io.RandomAccessFile(ff,"rw");
                  
                  
+                 Scanner sc_d = new Scanner(System.in);
+                 Scanner sc_n = new Scanner(System.in);
+                 Scanner sc_c = new Scanner(System.in);
+                 Scanner sc_t = new Scanner(System.in);
+                 Scanner sc_p = new Scanner(System.in);
                  
                  
+                 String _dni = sc_d.nextLine();
+                 String _nombre = sc_n.nextLine();
+                 String _correo = sc_c.nextLine();
+                 String _tlf = sc_t.nextLine();
+                 String _pwd = sc_p.nextLine();
                  
+                 char dni[] = new char[9];
+                 char nombre[] = new char[15];
+                 char correo[] = new char[20];
+                 char tlf[] = new char[9];
+                 char pwd[] = new char[15];
                  
+                 for(int i=0; i<_dni.length(); i++){  
+                     dni[i] = _dni.charAt(i);
+                 }
+                  for(int i=0; i<_nombre.length(); i++){  
+                     nombre[i] = _nombre.charAt(i);
+                 }
+                   for(int i=0; i<_correo.length(); i++){  
+                     correo[i] = _correo.charAt(i);
+                 }
+                    for(int i=0; i<_tlf.length(); i++){  
+                     tlf[i] = _tlf.charAt(i);
+                 }
+                     for(int i=0; i<_pwd.length(); i++){  
+                     pwd[i] = _pwd.charAt(i);
+                 }
+                 System.out.println(String.valueOf(dni) + "\n");
+                 System.out.println(nombre + "\n");
+                 System.out.println(correo + "\n");
+                 System.out.println(tlf + "\n");
+                 System.out.println(pwd + "\n");
                  
+                 System.out.println(_dni);
                  
-                 
-                 
-                 
-                 
-                 
-               //  Registro reg = new Registro(dni,nombre,correo,tlf,pwd);
-              //   grabarRegistro(aa, reg, ff); 
+                //Registro reg = new Registro(dni,nombre,correo,tlf,pwd);
+                //grabarRegistro(aa, reg, ff); 
                  
             }else{ if(menu == 3){
                  System.out.println("usted ha seleccionado dar de baja \n");
@@ -70,6 +101,8 @@ public class ProyectoDLM_AD {
         protected char correo[];
         protected char tlf[];
         protected char pwd[];
+
+      
 
     
         public void Registro( char dni[], char nombre[], char correo[], char tlf[], char pwd[]){

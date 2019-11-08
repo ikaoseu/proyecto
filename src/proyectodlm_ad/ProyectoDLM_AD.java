@@ -5,6 +5,7 @@
  */
 package proyectodlm_ad;
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 /**
  *
@@ -71,16 +72,16 @@ public class ProyectoDLM_AD {
                      for(int i=0; i<_pwd.length(); i++){  
                      pwd[i] = _pwd.charAt(i);
                  }
-                 System.out.println(String.valueOf(dni) + "\n");
-                 System.out.println(nombre + "\n");
+                 System.out.println(_dni.charAt(0) + "\n");
+                 System.out.println(Arrays.toString(nombre) + "\n");
                  System.out.println(correo + "\n");
                  System.out.println(tlf + "\n");
                  System.out.println(pwd + "\n");
                  
                  System.out.println(_dni);
                  
-                //Registro reg = new Registro(dni,nombre,correo,tlf,pwd);
-                //grabarRegistro(aa, reg, ff); 
+                Registro reg = new Registro(dni,nombre,correo,tlf,pwd);
+                grabarRegistro(aa, reg, ff); 
                  
             }else{ if(menu == 3){
                  System.out.println("usted ha seleccionado dar de baja \n");
